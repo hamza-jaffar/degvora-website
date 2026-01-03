@@ -1,6 +1,3 @@
-// App.jsx
-import React from "react";
-
 function App() {
   return (
     <div className="font-sans text-gray-900 scroll-smooth">
@@ -122,7 +119,7 @@ function App() {
       </footer>
 
       {/* Animations */}
-      <style jsx>{`
+      <style>{`
         .animate-fadeIn {
           opacity: 0;
           animation: fadeIn 1s forwards;
