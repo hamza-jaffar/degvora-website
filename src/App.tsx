@@ -118,7 +118,7 @@ function App() {
             inquiries, or project ideas.
           </p>
           <a
-            href="mailto:info@degvora.com"
+            href="mailto:contact@degvora.com"
             className="bg-indigo-600 text-white font-bold py-4 px-10 rounded-full shadow-xl hover:shadow-2xl hover:bg-indigo-700 transition text-lg md:text-xl"
           >
             Email Me
