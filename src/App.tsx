@@ -1,6 +1,33 @@
+import { Helmet } from "react-helmet";
+
 function App() {
   return (
     <div className="font-sans text-gray-900 scroll-smooth">
+      {/* SEO Meta Tags */}
+      <Helmet>
+        <title>Degvora | Premium Web Applications & APIs</title>
+        <meta
+          name="description"
+          content="Degvora is a home-based online software company specializing in modern web applications and APIs using React, Next.js, Laravel, and Tailwind CSS."
+        />
+        <meta
+          name="keywords"
+          content="Degvora, Web Developer, React, Next.js, Laravel, Tailwind CSS, API, Web Applications"
+        />
+        <meta name="author" content="Hamza Jaffar" />
+        <link rel="canonical" href="https://degvora.com/" />
+        <meta
+          property="og:title"
+          content="Degvora | Premium Web Applications & APIs"
+        />
+        <meta
+          property="og:description"
+          content="Building modern web applications and APIs using React, Next.js, Laravel, and Tailwind CSS."
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://degvora.com/" />
+      </Helmet>
+
       {/* Navbar */}
       <nav className="bg-white/80 backdrop-blur-md shadow-lg fixed w-full z-50">
         <div className="container mx-auto flex justify-between items-center py-5 px-6">
@@ -22,7 +49,10 @@ function App() {
       </nav>
 
       {/* Hero Section */}
-      <section className="relative h-screen flex flex-col justify-center items-center text-center px-6 bg-gradient-to-r from-indigo-700 via-purple-600 to-pink-500 overflow-hidden">
+      <section
+        className="relative h-screen flex flex-col justify-center items-center text-center px-6 bg-gradient-to-r from-indigo-700 via-purple-600 to-pink-500 overflow-hidden"
+        aria-label="Hero Section"
+      >
         {/* Floating shapes */}
         <div className="absolute top-0 left-0 w-72 h-72 bg-white/10 rounded-full blur-3xl animate-blob animation-delay-2000"></div>
         <div className="absolute bottom-10 right-0 w-72 h-72 bg-white/10 rounded-full blur-3xl animate-blob animation-delay-4000"></div>
@@ -43,9 +73,16 @@ function App() {
       </section>
 
       {/* About Section */}
-      <section id="about" className="py-28 bg-gray-50">
+      <section
+        id="about"
+        className="py-28 bg-gray-50"
+        aria-labelledby="about-heading"
+      >
         <div className="container mx-auto px-6 text-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900">
+          <h2
+            id="about-heading"
+            className="text-4xl md:text-5xl font-bold mb-6 text-gray-900"
+          >
             About Degvora
           </h2>
           <p className="text-gray-700 text-lg md:text-xl max-w-3xl mx-auto leading-relaxed">
@@ -63,39 +100,17 @@ function App() {
         </div>
       </section>
 
-      {/* Projects Section */}
-      <section id="projects" className="py-28 bg-white">
-        <div className="container mx-auto px-6">
-          <h2 className="text-4xl md:text-5xl font-bold mb-16 text-center text-gray-900">
-            Projects
-          </h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-12">
-            {/* Project Card */}
-            <div className="bg-white/70 backdrop-blur-md rounded-3xl shadow-2xl p-8 transform hover:scale-105 hover:shadow-3xl transition duration-500">
-              <h3 className="text-2xl md:text-3xl font-semibold mb-4">
-                MockAPI v1
-              </h3>
-              <p className="text-gray-700 mb-6 text-lg">
-                A premium API mocking platform for rapid development and
-                testing.
-              </p>
-              <a
-                href="https://mockapi.degvora.com/"
-                target="_blank"
-                className="inline-block bg-indigo-600 text-white font-semibold py-3 px-6 rounded-full shadow-lg hover:bg-indigo-700 transition"
-              >
-                Visit Project
-              </a>
-            </div>
-            {/* Add more project cards here */}
-          </div>
-        </div>
-      </section>
-
       {/* Contact Section */}
-      <section id="contact" className="py-28 bg-gray-50">
+      <section
+        id="contact"
+        className="py-28 bg-gray-50"
+        aria-labelledby="contact-heading"
+      >
         <div className="container mx-auto px-6 text-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900">
+          <h2
+            id="contact-heading"
+            className="text-4xl md:text-5xl font-bold mb-6 text-gray-900"
+          >
             Contact Me
           </h2>
           <p className="text-gray-700 text-lg md:text-xl max-w-3xl mx-auto mb-10 leading-relaxed">
@@ -120,46 +135,19 @@ function App() {
 
       {/* Animations */}
       <style>{`
-        .animate-fadeIn {
-          opacity: 0;
-          animation: fadeIn 1s forwards;
-        }
-        .delay-200 {
-          animation-delay: 0.2s;
-        }
-        .delay-400 {
-          animation-delay: 0.4s;
-        }
-        @keyframes fadeIn {
-          to {
-            opacity: 1;
-          }
-        }
+        .animate-fadeIn { opacity: 0; animation: fadeIn 1s forwards; }
+        .delay-200 { animation-delay: 0.2s; }
+        .delay-400 { animation-delay: 0.4s; }
+        @keyframes fadeIn { to { opacity: 1; } }
 
         @keyframes blob {
-          0%,
-          100% {
-            transform: translate(0px, 0px) scale(1);
-          }
-          33% {
-            transform: translate(30px, -50px) scale(1.1);
-          }
-          66% {
-            transform: translate(-20px, 20px) scale(0.9);
-          }
+          0%,100% { transform: translate(0px,0px) scale(1); }
+          33% { transform: translate(30px,-50px) scale(1.1); }
+          66% { transform: translate(-20px,20px) scale(0.9); }
         }
-
-        .animate-blob {
-          animation: blob 8s infinite;
-        }
-
-        .animation-delay-2000 {
-          animation-delay: 2s;
-        }
-
-        .animation-delay-4000 {
-          animation-delay: 4s;
-        }
+        .animate-blob { animation: blob 8s infinite; }
+        .animation-delay-2000 { animation-delay: 2s; }
+        .animation-delay-4000 { animation-delay: 4s; }
       `}</style>
     </div>
   );
