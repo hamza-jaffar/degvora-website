@@ -1,1 +1,112 @@
 @import "tailwindcss";
+
+@theme {
+  --color-primary: #6366f1;
+  --color-secondary: #a855f7;
+  --color-accent: #22d3ee;
+  --color-dark: #070b14;
+  --color-dark-lighter: #0f172a;
+
+  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+
+  --animate-blob: blob 7s infinite;
+  --animate-tilt: tilt 10s infinite linear;
+  --animate-glow: glow 2s ease-in-out infinite alternate;
+
+  @keyframes blob {
+    0% {
+      transform: translate(0px, 0px) scale(1);
+    }
+    33% {
+      transform: translate(30px, -50px) scale(1.1);
+    }
+    66% {
+      transform: translate(-20px, 20px) scale(0.9);
+    }
+    100% {
+      transform: translate(0px, 0px) scale(1);
+    }
+  }
+
+  @keyframes tilt {
+    0%,
+    50%,
+    100% {
+      transform: rotate(0deg);
+    }
+    25% {
+      transform: rotate(0.5deg);
+    }
+    75% {
+      transform: rotate(-0.5deg);
+    }
+  }
+
+  @keyframes glow {
+    from {
+      box-shadow: 0 0 10px -5px var(--color-primary);
+    }
+    to {
+      box-shadow: 0 0 20px 0px var(--color-primary);
+    }
+  }
+}
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  @apply bg-dark text-slate-200 antialiased selection:bg-primary/30 selection:text-white;
+  margin: 0;
+  font-family: var(--font-sans);
+  letter-spacing: -0.01em;
+}
+
+.glass {
+  @apply bg-white/[0.03] backdrop-blur-xl border border-white/[0.05];
+}
+
+.glass-dark {
+  @apply bg-black/40 backdrop-blur-2xl border border-white/[0.05];
+}
+
+.text-gradient {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-primary via-secondary to-accent animate-tilt;
+}
+
+.btn-primary {
+  @apply relative inline-flex items-center justify-center px-10 py-4 font-bold text-white transition-all duration-300 bg-primary rounded-2xl hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary shadow-[0_0_20px_rgba(99,102,241,0.3)] hover:shadow-[0_0_30px_rgba(99,102,241,0.5)] hover:-translate-y-0.5 active:translate-y-0;
+}
+
+.btn-secondary {
+  @apply relative inline-flex items-center justify-center px-10 py-4 font-bold text-white transition-all duration-300 bg-white/5 border border-white/10 rounded-2xl hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white/20 hover:-translate-y-0.5 active:translate-y-0;
+}
+
+.card {
+  @apply p-8 rounded-[32px] transition-all duration-500 hover:scale-[1.02] hover:bg-white/[0.05] hover:border-white/10;
+}
+
+.section-glow {
+  @apply absolute -z-10 bg-primary/20 rounded-full blur-[160px];
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-dark;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-slate-800 rounded-full hover:bg-slate-700 transition-colors;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  @apply tracking-tight;
+}

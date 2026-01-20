@@ -1,153 +1,110 @@
+import { useEffect } from "react";
 import { Helmet } from "react-helmet";
+import Navbar from "./components/Navbar";
+import Hero from "./components/Hero";
+import Services from "./components/Services";
+import Portfolio from "./components/Portfolio";
+import Team from "./components/Team";
+import Testimonials from "./components/Testimonials";
+import Contact from "./components/Contact";
+import Footer from "./components/Footer";
 
 function App() {
+  useEffect(() => {
+    const handleScroll = () => {
+      const nav = document.querySelector("nav");
+      const navBg = document.querySelector(".nav-bg");
+      if (window.scrollY > 50) {
+        navBg?.classList.replace("opacity-0", "opacity-100");
+        nav?.classList.add("shadow-xl");
+      } else {
+        navBg?.classList.replace("opacity-100", "opacity-0");
+        nav?.classList.remove("shadow-xl");
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    // Smooth entrance animation for all sections
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("animate-fade-in-up");
+          }
+        });
+      },
+      { threshold: 0.1 },
+    );
+
+    document.querySelectorAll("section").forEach((section) => {
+      section.classList.add("opacity-0");
+      observer.observe(section);
+    });
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <div className="font-sans text-gray-900 scroll-smooth">
-      {/* SEO Meta Tags */}
+    <div className="font-sans text-slate-200 bg-dark selection:bg-primary/30 selection:text-white">
       <Helmet>
-        <title>Degvora | Premium Web Applications & APIs</title>
+        <title>Degvora | Premium Software House & API Experts</title>
         <meta
           name="description"
-          content="Degvora is a home-based online software company specializing in modern web applications and APIs using React, Next.js, Laravel, and Tailwind CSS."
+          content="Degvora is a premium software house specializing in modern web applications, high-performance APIs, and digital innovation using React, Next.js, and Laravel."
         />
         <meta
           name="keywords"
-          content="Degvora, Web Developer, React, Next.js, Laravel, Tailwind CSS, API, Web Applications"
+          content="Degvora, Software House, Web Development, API Development, React, Next.js, Laravel, Premium Design, Tech Innovation"
         />
         <meta name="author" content="Hamza Jaffar" />
         <link rel="canonical" href="https://degvora.com/" />
         <meta
           property="og:title"
-          content="Degvora | Premium Web Applications & APIs"
+          content="Degvora | Premium Software House & API Experts"
         />
         <meta
           property="og:description"
-          content="Building modern web applications and APIs using React, Next.js, Laravel, and Tailwind CSS."
+          content="Building the future of digital innovation with premium software solutions and APIs."
         />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://degvora.com/" />
       </Helmet>
 
-      {/* Navbar */}
-      <nav className="bg-white/80 backdrop-blur-md shadow-lg fixed w-full z-50">
-        <div className="container mx-auto flex justify-between items-center py-5 px-6">
-          <h1 className="text-2xl md:text-3xl font-bold text-indigo-600 tracking-wider">
-            Degvora
-          </h1>
-          <div className="space-x-8 text-gray-800 font-medium text-lg">
-            <a href="#about" className="hover:text-indigo-600 transition">
-              About
-            </a>
-            <a href="#projects" className="hover:text-indigo-600 transition">
-              Projects
-            </a>
-            <a href="#contact" className="hover:text-indigo-600 transition">
-              Contact
-            </a>
-          </div>
-        </div>
-      </nav>
+      <Navbar />
 
-      {/* Hero Section */}
-      <section
-        className="relative h-screen flex flex-col justify-center items-center text-center px-6 bg-gradient-to-r from-indigo-700 via-purple-600 to-pink-500 overflow-hidden"
-        aria-label="Hero Section"
-      >
-        {/* Floating shapes */}
-        <div className="absolute top-0 left-0 w-72 h-72 bg-white/10 rounded-full blur-3xl animate-blob animation-delay-2000"></div>
-        <div className="absolute bottom-10 right-0 w-72 h-72 bg-white/10 rounded-full blur-3xl animate-blob animation-delay-4000"></div>
+      <main>
+        <Hero />
+        <Services />
+        <Portfolio />
+        <Team />
+        <Testimonials />
+        <Contact />
+      </main>
 
-        <h1 className="relative text-5xl md:text-7xl font-extrabold text-white mb-5 animate-fadeIn">
-          Degvora
-        </h1>
-        <p className="relative text-lg md:text-2xl mb-10 max-w-2xl text-white/90 animate-fadeIn delay-200">
-          Building premium online software solutions and APIs for modern web
-          applications.
-        </p>
-        <a
-          href="#projects"
-          className="relative bg-white text-indigo-600 font-bold py-4 px-10 rounded-full shadow-xl hover:shadow-2xl hover:bg-gray-100 transition animate-fadeIn delay-400"
-        >
-          See Projects
-        </a>
-      </section>
+      <Footer />
 
-      {/* About Section */}
-      <section
-        id="about"
-        className="py-28 bg-gray-50"
-        aria-labelledby="about-heading"
-      >
-        <div className="container mx-auto px-6 text-center">
-          <h2
-            id="about-heading"
-            className="text-4xl md:text-5xl font-bold mb-6 text-gray-900"
-          >
-            About Degvora
-          </h2>
-          <p className="text-gray-700 text-lg md:text-xl max-w-3xl mx-auto leading-relaxed">
-            Degvora is a home-based online software company founded by Hamza. I
-            specialize in creating modern web applications using React, Next.js,
-            Laravel, and Tailwind CSS. Currently, I'm working on projects like{" "}
-            <a
-              href="https://mockapi.degvora.com/"
-              className="text-indigo-600 hover:underline font-semibold"
-            >
-              MockAPI
-            </a>
-            , helping developers rapidly build and test APIs.
-          </p>
-        </div>
-      </section>
-
-      {/* Contact Section */}
-      <section
-        id="contact"
-        className="py-28 bg-gray-50"
-        aria-labelledby="contact-heading"
-      >
-        <div className="container mx-auto px-6 text-center">
-          <h2
-            id="contact-heading"
-            className="text-4xl md:text-5xl font-bold mb-6 text-gray-900"
-          >
-            Contact Me
-          </h2>
-          <p className="text-gray-700 text-lg md:text-xl max-w-3xl mx-auto mb-10 leading-relaxed">
-            I'm a solo developer working remotely. Reach out for collaborations,
-            inquiries, or project ideas.
-          </p>
-          <a
-            href="mailto:contact@degvora.com"
-            className="bg-indigo-600 text-white font-bold py-4 px-10 rounded-full shadow-xl hover:shadow-2xl hover:bg-indigo-700 transition text-lg md:text-xl"
-          >
-            Email Me
-          </a>
-        </div>
-      </section>
-
-      {/* Footer */}
-      <footer className="bg-white py-10 shadow-inner mt-12">
-        <div className="container mx-auto text-center text-gray-600 text-lg">
-          © {new Date().getFullYear()} Degvora. All rights reserved.
-        </div>
-      </footer>
-
-      {/* Animations */}
       <style>{`
-        .animate-fadeIn { opacity: 0; animation: fadeIn 1s forwards; }
-        .delay-200 { animation-delay: 0.2s; }
-        .delay-400 { animation-delay: 0.4s; }
-        @keyframes fadeIn { to { opacity: 1; } }
-
-        @keyframes blob {
-          0%,100% { transform: translate(0px,0px) scale(1); }
-          33% { transform: translate(30px,-50px) scale(1.1); }
-          66% { transform: translate(-20px,20px) scale(0.9); }
+        .animate-fade-in-up {
+          animation: fadeInUp 1s ease-out forwards;
         }
-        .animate-blob { animation: blob 8s infinite; }
+
+        @keyframes fadeInUp {
+          from {
+            opacity: 0;
+            transform: translateY(30px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+
+        .animation-delay-200 { animation-delay: 0.2s; }
+        .animation-delay-400 { animation-delay: 0.4s; }
+        .animation-delay-600 { animation-delay: 0.6s; }
+        .animation-delay-800 { animation-delay: 0.8s; }
         .animation-delay-2000 { animation-delay: 2s; }
-        .animation-delay-4000 { animation-delay: 4s; }
       `}</style>
     </div>
   );
