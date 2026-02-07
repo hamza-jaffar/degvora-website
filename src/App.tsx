@@ -4,6 +4,7 @@ import ServiceWeOffer from "@/sections/service-we-offer";
 import WayOfBuildingSoftware from "@/sections/way-of-building-software";
 import OurDesignAndDevelopmentProcess from "@/sections/our-design-and-development-process";
 import DevelopmentThroughAlcaline from "@/sections/development-through-alcaline";
+import HomePageHireSection from "@/sections/home-page-hire-section";
 
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
         <OurDesignAndDevelopmentProcess />
       </section>
       <DevelopmentThroughAlcaline />
+      <HomePageHireSection />
     </section>
   );
 };
