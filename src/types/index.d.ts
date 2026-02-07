@@ -4,3 +4,12 @@ export interface Service {
   description: string;
   image: string;
 }
+
+export interface WayOfBuildingSoftware {
+  id: number;
+  title: string;
+  long_description: string;
+  short_description: string;
+  comment: string;
+  image: string;
+}

@@ -1,6 +1,7 @@
 import NavBar from "@/components/nav-bar";
 import BannerSection from "@/sections/banner";
 import ServiceWeOffer from "@/sections/service-we-offer";
+import WayOfBuildingSoftware from "@/sections/way-of-building-software";
 
 const App = () => {
   return (
@@ -8,6 +9,7 @@ const App = () => {
       <NavBar />
       <BannerSection />
       <ServiceWeOffer />
+      <WayOfBuildingSoftware />
     </section>
   );
 };
