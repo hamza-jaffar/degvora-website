@@ -22,3 +22,10 @@ export interface OurDesignAndDevelopmentProcess {
   gradient_from: string;
   gradient_to: string;
 }
+
+export interface DevelopmentThroughAlcaline {
+  id: number;
+  process_number: number;
+  title: string;
+  description: string;
+}
