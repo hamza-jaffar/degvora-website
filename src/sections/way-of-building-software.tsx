@@ -40,16 +40,14 @@ const WayOfBuildingSoftware = () => {
                 </p>
 
                 {/* Quote */}
-                <div className="bg-gray-50 p-4 rounded-xl border-l-4 border-[var(--secondary)]">
-                  <p className="text-[var(--secondary)] italic">
-                    “{data.comment}”
-                  </p>
+                <div className="bg-gray-50 p-4 rounded-xl border-l-4 border-(--secondary)">
+                  <p className="text-(--secondary) italic">“{data.comment}”</p>
                 </div>
 
                 {/* Author */}
                 <div className="flex items-center gap-4 mt-2">
                   <img
-                    className="h-12 w-12 rounded-full object-cover ring-2 ring-[var(--secondary-light)]"
+                    className="h-12 w-12 rounded-full object-cover ring-2 ring-(--secondary-light)"
                     src="/assets/ceo-image.png"
                     alt="CEO"
                   />

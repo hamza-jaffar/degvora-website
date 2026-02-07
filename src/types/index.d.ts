@@ -13,3 +13,12 @@ export interface WayOfBuildingSoftware {
   comment: string;
   image: string;
 }
+
+export interface OurDesignAndDevelopmentProcess {
+  id: number;
+  title: string;
+  description: string;
+  icon_url: string;
+  gradient_from: string;
+  gradient_to: string;
+}
