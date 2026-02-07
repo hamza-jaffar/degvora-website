@@ -5,6 +5,7 @@ import WayOfBuildingSoftware from "@/sections/way-of-building-software";
 import OurDesignAndDevelopmentProcess from "@/sections/our-design-and-development-process";
 import DevelopmentThroughAlcaline from "@/sections/development-through-alcaline";
 import HomePageHireSection from "@/sections/home-page-hire-section";
+import Footer from "@/components/footer";
 
 const App = () => {
   return (
@@ -20,6 +21,7 @@ const App = () => {
       </section>
       <DevelopmentThroughAlcaline />
       <HomePageHireSection />
+      <Footer />
     </section>
   );
 };
