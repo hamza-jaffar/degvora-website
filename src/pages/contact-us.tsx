@@ -1,5 +1,6 @@
 import Footer from "@/components/footer";
 import NavBar from "@/components/nav-bar";
+import { Mail, PhoneIcon } from "lucide-react";
 
 const ContactUsPage = () => {
   return (
@@ -20,11 +21,7 @@ const ContactUsPage = () => {
           <div className="flex flex-col gap-4 mt-4">
             {/* Phone */}
             <div className="flex items-center gap-4 p-4">
-              <img
-                src="/icons/mobile-chat-icon.png"
-                alt="Phone"
-                className="w-6 h-6 sm:w-8 sm:h-8"
-              />
+              <PhoneIcon className="w-6 h-6 text-[#57007B]" />
               <a
                 href="tel:+923466624947"
                 className="text-gray-900 text-lg sm:text-xl font-medium"
@@ -35,11 +32,7 @@ const ContactUsPage = () => {
 
             {/* Email */}
             <div className="flex items-center gap-4 p-4">
-              <img
-                src="/icons/email-icon.png"
-                alt="Email"
-                className="w-6 h-6 sm:w-8 sm:h-8"
-              />
+              <Mail className="w-6 h-6 text-[#57007B]" />
               <a
                 href="mailto:contact@degvora.com"
                 className="text-gray-900 text-lg sm:text-xl font-medium"

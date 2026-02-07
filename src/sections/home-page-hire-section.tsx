@@ -18,7 +18,7 @@ const HomePageHireSection = () => {
               className="w-16 sm:w-20 md:w-24"
             />
             <Link to="/contact-us">
-              <button className="text-sm sm:text-base md:text-lg font-semibold bg-linear-to-r from-[#F16063] to-[#FFC656] px-6 py-3 rounded-lg cursor-pointer text-white">
+              <button className="text-sm hover:scale-105 transition-transform sm:text-base md:text-lg font-semibold bg-linear-to-r from-[#F16063] to-[#FFC656] px-6 py-3 rounded-lg cursor-pointer text-white">
                 Hire Top Developers
               </button>
             </Link>

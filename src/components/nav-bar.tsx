@@ -11,10 +11,10 @@ const NavBar = () => {
           <Link to="/">Home</Link>
         </li>
         <li className="cursor-pointer text-gray-700">
-          <a href="#service">Services</a>
+          <a href="/#service">Services</a>
         </li>
         <li className="cursor-pointer text-gray-700">
-          <a href="#process">Process</a>
+          <a href="/#process">Process</a>
         </li>
         <li className="cursor-pointer text-gray-700">
           <Link to="/contact-us">Contact</Link>
@@ -22,7 +22,7 @@ const NavBar = () => {
       </ul>
 
       <Link to="/contact-us">
-        <button className="px-4 py-2 cursor-pointer bg-linear-to-r from-(--primary) to-(--secondary) rounded-md text-white">
+        <button className="px-4 py-2 cursor-pointer bg-linear-to-r from-(--primary) to-(--secondary) hover:scale-105 transition-transform rounded-md text-white">
           Contact Us
         </button>
       </Link>

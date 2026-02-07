@@ -1,3 +1,4 @@
+import { Facebook, Instagram, Youtube } from "lucide-react";
 import AppLogo from "./app-logo";
 
 const Footer = () => {
@@ -10,6 +11,29 @@ const Footer = () => {
             <span className="text-sm">
               © 2026 Degvora. All rights reserved.
             </span>
+          </div>
+          <div className="flex gap-3">
+            <a
+              href="https://www.facebook.com/profile.php?id=61572858336690"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Facebook className="w-6 h-6 text-[#57007B]" />
+            </a>
+            <a
+              href="https://www.instagram.com/degvora_official/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Instagram className="w-6 h-6 text-[#57007B]" />
+            </a>
+            <a
+              href="https://www.youtube.com/@Degvora"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Youtube className="w-6 h-6 text-[#57007B]" />
+            </a>
           </div>
         </div>
       </div>

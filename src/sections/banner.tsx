@@ -21,7 +21,7 @@ const BannerSection = () => {
             We help build and manage a team of world-class developers to bring
             your vision to life
           </p>
-          <button className="bg-blue-600 px-6 py-3 cursor-pointer rounded-md text-white">
+          <button className="bg-linear-to-r from-(--primary) to-(--secondary) hover:scale-105 transition-transform px-6 py-3 cursor-pointer rounded-md text-white">
             Let's Get Started
           </button>
         </div>
