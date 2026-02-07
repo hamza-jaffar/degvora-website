@@ -2,7 +2,7 @@ import { developmentThroughAlcaline } from "@/constant/development-through-alcal
 import type { DevelopmentThroughAlcaline } from "@/types";
 import { useState } from "react";
 
-const DevelopmentThroughAlcaline = () => {
+const DevelopmentThroughAlcalineSection = () => {
   const [evenProcess] = useState<DevelopmentThroughAlcaline[]>(
     developmentThroughAlcaline.filter((step) => step.process_number % 2 === 0),
   );
@@ -97,4 +97,4 @@ const DevelopmentThroughAlcaline = () => {
   );
 };
 
-export default DevelopmentThroughAlcaline;
+export default DevelopmentThroughAlcalineSection;
