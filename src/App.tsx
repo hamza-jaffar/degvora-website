@@ -1,6 +1,10 @@
+import NavBar from "@/components/nav-bar"
+
 const App = () => {
   return (
-    <div className="underline" >App</div>
+    <section>
+      <NavBar />
+    </section>
   )
 }
 
