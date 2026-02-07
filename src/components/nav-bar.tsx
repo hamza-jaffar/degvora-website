@@ -2,7 +2,7 @@ import AppLogo from "./app-logo";
 
 const NavBar = () => {
   return (
-    <div className="w-full p-4 max-w-7xl mx-auto fixed top-4 left-0 right-0 z-10 border-gray-100 border rounded-xl shadow-lg flex justify-between items-center">
+    <div className="w-full bg-white p-4 max-w-7xl mx-auto fixed top-1 left-0 right-0 z-10 border-gray-100 border rounded-xl shadow-lg flex justify-between items-center">
       <AppLogo showText={true} />
 
       <ul className="gap-7 hidden md:flex ">

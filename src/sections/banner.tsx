@@ -1,7 +1,7 @@
 const BannerSection = () => {
   return (
     <section className="w-full relative overflow-hidden">
-      <section className="w-full flex flex-col md:flex-row lg:px-12 xl:px-22 items-center mt-35">
+      <section className="w-full flex flex-col md:flex-row px-3 sm:px-8 lg:px-12 xl:px-22 items-center mt-35">
         <div className="space-y-6 lg:space-y-12">
           <h1 className="text-gray-900 text-3xl lg:text-5xl">
             Great{" "}
