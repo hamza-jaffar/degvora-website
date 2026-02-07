@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import AppLogo from "./app-logo";
 
 const NavBar = () => {
@@ -7,7 +8,7 @@ const NavBar = () => {
 
       <ul className="gap-7 hidden md:flex ">
         <li className="cursor-pointer text-gray-700">
-          <a href="#home">Home</a>
+          <Link to="/">Home</Link>
         </li>
         <li className="cursor-pointer text-gray-700">
           <a href="#service">Services</a>
@@ -16,13 +17,15 @@ const NavBar = () => {
           <a href="#process">Process</a>
         </li>
         <li className="cursor-pointer text-gray-700">
-          <a href="#contact">Contact</a>
+          <Link to="/contact-us">Contact</Link>
         </li>
       </ul>
 
-      <button className="px-4 py-2 cursor-pointer bg-linear-to-r from-(--primary) to-(--secondary) rounded-md text-white">
-        Contact Us
-      </button>
+      <Link to="/contact-us">
+        <button className="px-4 py-2 cursor-pointer bg-linear-to-r from-(--primary) to-(--secondary) rounded-md text-white">
+          Contact Us
+        </button>
+      </Link>
     </div>
   );
 };

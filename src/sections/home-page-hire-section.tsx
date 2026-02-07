@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const HomePageHireSection = () => {
   return (
     <section className="w-full max-w-7xl mx-auto px-4 mt-16 mb-8">
@@ -15,9 +17,11 @@ const HomePageHireSection = () => {
               alt="arrows"
               className="w-16 sm:w-20 md:w-24"
             />
-            <button className="text-sm sm:text-base md:text-lg font-semibold bg-linear-to-r from-[#F16063] to-[#FFC656] px-6 py-3 rounded-lg cursor-pointer text-white">
-              Hire Top Developers
-            </button>
+            <Link to="/contact-us">
+              <button className="text-sm sm:text-base md:text-lg font-semibold bg-linear-to-r from-[#F16063] to-[#FFC656] px-6 py-3 rounded-lg cursor-pointer text-white">
+                Hire Top Developers
+              </button>
+            </Link>
             <img
               src="/assets/arrows.png"
               alt="arrows"
