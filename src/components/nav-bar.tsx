@@ -6,10 +6,18 @@ const NavBar = () => {
       <AppLogo showText={true} />
 
       <ul className="gap-7 hidden md:flex ">
-        <li className="cursor-pointer text-gray-700">Home</li>
-        <li className="cursor-pointer text-gray-700">About</li>
-        <li className="cursor-pointer text-gray-700">Services</li>
-        <li className="cursor-pointer text-gray-700">Contact</li>
+        <li className="cursor-pointer text-gray-700">
+          <a href="#home">Home</a>
+        </li>
+        <li className="cursor-pointer text-gray-700">
+          <a href="#service">Services</a>
+        </li>
+        <li className="cursor-pointer text-gray-700">
+          <a href="#process">Process</a>
+        </li>
+        <li className="cursor-pointer text-gray-700">
+          <a href="#contact">Contact</a>
+        </li>
       </ul>
 
       <button className="px-4 py-2 cursor-pointer bg-linear-to-r from-(--primary) to-(--secondary) rounded-md text-white">

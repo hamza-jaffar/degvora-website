@@ -2,7 +2,7 @@ import { ourDesignAndDevelopmentProcess } from "@/constant/our-design-and-develo
 
 const OurDesignAndDevelopmentProcess = () => {
   return (
-    <section className="w-full max-w-7xl mx-auto px-4 mt-16">
+    <section id="process" className="w-full max-w-7xl mx-auto py-12 px-4">
       {/* Heading */}
       <div className="text-center flex flex-col items-center gap-5">
         <span className="w-24 h-2 rounded-full bg-linear-to-r from-(--secondary-light) to-(--primary-light)" />
@@ -20,7 +20,7 @@ const OurDesignAndDevelopmentProcess = () => {
         {ourDesignAndDevelopmentProcess.map((item) => (
           <div
             key={item.id}
-            className="group bg-white rounded-2xl border border-(--primary-light) p-6 transition-all duration-300 hover:shadow-xl cursor-pointer"
+            className="group bg-white rounded-lg border border-(--secondary)/20 p-6 transition-all duration-300 hover:shadow-xl cursor-pointer"
           >
             <div className="flex items-center gap-4 mb-4">
               <div

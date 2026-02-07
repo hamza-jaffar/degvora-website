@@ -32,7 +32,10 @@ const ServiceWeOffer = () => {
   };
 
   return (
-    <section className="text-center w-full flex flex-col mt-10 gap-8 max-w-7xl mx-auto px-4">
+    <section
+      id="service"
+      className="text-center w-full flex flex-col mt-10 gap-8 max-w-7xl mx-auto px-4"
+    >
       <h1 className="text-3xl font-bold text-gray-900">Services we offer</h1>
       <div className="relative">
         {/* Previous Button */}

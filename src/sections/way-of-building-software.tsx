@@ -2,7 +2,7 @@ import { wayOfBuildingSoftware } from "@/constant/way-of-building-software";
 
 const WayOfBuildingSoftware = () => {
   return (
-    <section className="w-full max-w-7xl mx-auto px-4 mt-16">
+    <section className="w-full max-w-7xl mx-auto px-4 mt-16 mb-8">
       {/* Heading */}
       <div className="text-center flex flex-col items-center gap-5">
         <span className="w-24 h-2 rounded-full bg-linear-to-r from-(--secondary-light) to-(--primary-light)" />

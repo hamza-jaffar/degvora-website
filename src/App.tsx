@@ -6,12 +6,16 @@ import OurDesignAndDevelopmentProcess from "@/sections/our-design-and-developmen
 
 const App = () => {
   return (
-    <section className="max-w-7xl flex flex-col items-center mx-auto">
+    <section className="flex flex-col items-center mx-auto">
       <NavBar />
       <BannerSection />
-      <ServiceWeOffer />
+      <section className="w-full bg-gray-100">
+        <ServiceWeOffer />
+      </section>
       <WayOfBuildingSoftware />
-      <OurDesignAndDevelopmentProcess />
+      <section className="w-full bg-gray-100">
+        <OurDesignAndDevelopmentProcess />
+      </section>
     </section>
   );
 };
