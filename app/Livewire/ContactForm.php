@@ -2,8 +2,10 @@
 
 namespace App\Livewire;
 
+use App\Mail\NotifyAdmin;
 use App\Models\Contact;
 use Livewire\Component;
+use Mail;
 
 class ContactForm extends Component
 {
@@ -27,6 +29,9 @@ class ContactForm extends Component
         Contact::create($validatedData);
 
         session()->flash('success', 'Message sent successfully.');
+
+
+        Mail::to('hamzajaffer231006@gmail.com')->queue(new NotifyAdmin());
 
         $this->reset(['name', 'email', 'subject', 'message']);
 
