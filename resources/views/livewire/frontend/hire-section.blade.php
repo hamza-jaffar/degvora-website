@@ -9,12 +9,12 @@
         <div class="md:w-1/2 flex justify-center md:justify-end">
             <div class="flex flex-col items-center gap-4">
                 <img src="/assets/arrows.png" alt="arrows" class="w-16 sm:w-20 md:w-24" />
-                <Link to="/contact-us">
-                <button
-                    class="text-sm hover:scale-105 transition-transform sm:text-base md:text-lg font-semibold bg-linear-to-r from-[#F16063] to-[#FFC656] px-6 py-3 rounded-lg cursor-pointer text-white">
-                    Hire Top Developers
-                </button>
-                </Link>
+                <a href="/contact-us">
+                    <button
+                        class="text-sm hover:scale-105 transition-transform sm:text-base md:text-lg font-semibold bg-linear-to-r from-[#F16063] to-[#FFC656] px-6 py-3 rounded-lg cursor-pointer text-white">
+                        Hire Top Developers
+                    </button>
+                </a>
                 <img src="/assets/arrows.png" alt="arrows" class="rotate-180 w-16 sm:w-20 md:w-24" />
             </div>
         </div>

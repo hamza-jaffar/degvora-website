@@ -49,7 +49,7 @@
             @foreach ($services as $index => $_)
                 <button @click="scrollTo({{ $index }})" class="h-3 rounded-full transition-all duration-300"
                     :class="currentIndex === {{ $index }} ?
-                        'w-8 bg-gradient-to-b from-pink-500 to-purple-500' :
+                        'w-8 bg-linear-to-b from-pink-500 to-purple-500' :
                         'w-3 border border-purple-500'"></button>
             @endforeach
         </div>

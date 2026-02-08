@@ -13,6 +13,10 @@ Route::get('/', function () {
     return view('welcome');
 })->name('home');
 
+Route::get('/contact-us', function () {
+    return view('pages.contact');
+})->name('contact');
+
 Route::view('dashboard', 'dashboard')
     ->middleware(['auth', 'verified'])
     ->name('dashboard');

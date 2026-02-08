@@ -18,10 +18,12 @@
                     We help build and manage a team of world-class developers to bring
                     your vision to life
                 </p>
-                <button
-                    class="bg-linear-to-r from-purple-600 to-pink-500 hover:scale-105 transition-transform px-6 py-3 cursor-pointer rounded-md text-white">
-                    Let's Get Started
-                </button>
+                <a href="/contact-us">
+                    <button
+                        class="bg-linear-to-r from-purple-600 to-pink-500 hover:scale-105 transition-transform px-6 py-3 cursor-pointer rounded-md text-white">
+                        Let's Get Started
+                    </button>
+                </a>
             </div>
             <div>
                 <img src="/assets/banner_image.png" alt="" />
